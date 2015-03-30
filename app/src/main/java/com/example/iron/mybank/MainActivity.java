@@ -21,8 +21,10 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        amountInput = (EditText) findViewById(R.id.amount_input);
+        withdrawButton = (Button) findViewById(R.id.button_withdraw);
+        depositButton = (Button) findViewById(R.id.button_deposit);
         amountDisplay = (TextView) findViewById(R.id.balance_display);
-        amountDisplay.setText("Hello World");
     }
 
 
