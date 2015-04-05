@@ -26,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (1 == 1) {
+        if (1 == 1 || 1 > 1) {
             Log.d(TAG, "Equals True!!!");
         } else {
             Log.d(TAG, "Equals False!!!");
@@ -38,16 +38,16 @@ public class MainActivity extends ActionBarActivity {
             Log.d(TAG, "Greater than False!!!");
         }
 
-        if (2 > 1) {
-            Log.d(TAG, "Equals True!!!");
+        if (2 < 1) {
+            Log.d(TAG, "Less than  True!!!");
         } else {
-            Log.d(TAG, "Equals False!!!");
+            Log.d(TAG, "Less than  False!!!");
         }
 
-        if (1) {
-            Log.d(TAG, "Equals True!!!");
+        if (0 >= 1) {
+            Log.d(TAG, "Greater than or equal to True!!!");
         } else {
-            Log.d(TAG, "Equals False!!!");
+            Log.d(TAG, "Greater than or equal to False!!!");
         }
 
 
