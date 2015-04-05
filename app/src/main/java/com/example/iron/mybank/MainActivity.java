@@ -26,32 +26,6 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (1 == 1 || 1 > 1) {
-            Log.d(TAG, "Equals True!!!");
-        } else {
-            Log.d(TAG, "Equals False!!!");
-        }
-
-        if (2 > 1) {
-            Log.d(TAG, "Greater than True!!!");
-        } else {
-            Log.d(TAG, "Greater than False!!!");
-        }
-
-        if (2 < 1) {
-            Log.d(TAG, "Less than  True!!!");
-        } else {
-            Log.d(TAG, "Less than  False!!!");
-        }
-
-        if (0 >= 1) {
-            Log.d(TAG, "Greater than or equal to True!!!");
-        } else {
-            Log.d(TAG, "Greater than or equal to False!!!");
-        }
-
-
-
         mCurrentAccount = new BankAccount();
         mAmountInput = (EditText) findViewById(R.id.amount_input);
         mWithdrawButton = (Button) findViewById(R.id.button_withdraw);
