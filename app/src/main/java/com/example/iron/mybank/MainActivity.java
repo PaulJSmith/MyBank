@@ -26,6 +26,23 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        int [] arrayLiteral = {200,300,400,500,600};
+        Log.d(TAG,"check it out " +arrayLiteral[4]);
+
+        String [] stringArray = new String [2];
+        stringArray[1] = "hello there";
+
+        Log.d(TAG, stringArray[0]+" "+stringArray[1]);
+
+        int[] array = new int[5];
+        array[0] = 200;
+        array[1] = 300;
+        array[2] = 400;
+        array[3] = 500;
+        array[4] = 600;
+
+        Log.d(TAG, "Position of array 0 is "+array[0]);
+
         mCurrentAccount = new BankAccount();
         mAmountInput = (EditText) findViewById(R.id.amount_input);
         mWithdrawButton = (Button) findViewById(R.id.button_withdraw);
