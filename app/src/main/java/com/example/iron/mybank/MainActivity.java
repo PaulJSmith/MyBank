@@ -2,6 +2,7 @@ package com.example.iron.mybank;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,6 +25,32 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (1 == 1) {
+            Log.d(TAG, "Equals True!!!");
+        } else {
+            Log.d(TAG, "Equals False!!!");
+        }
+
+        if (2 > 1) {
+            Log.d(TAG, "Greater than True!!!");
+        } else {
+            Log.d(TAG, "Greater than False!!!");
+        }
+
+        if (2 > 1) {
+            Log.d(TAG, "Equals True!!!");
+        } else {
+            Log.d(TAG, "Equals False!!!");
+        }
+
+        if (1) {
+            Log.d(TAG, "Equals True!!!");
+        } else {
+            Log.d(TAG, "Equals False!!!");
+        }
+
+
 
         mCurrentAccount = new BankAccount();
         mAmountInput = (EditText) findViewById(R.id.amount_input);
@@ -50,7 +77,7 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
-           }
+    }
 
 
     @Override
