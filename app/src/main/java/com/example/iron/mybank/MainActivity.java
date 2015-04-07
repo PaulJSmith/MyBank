@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -26,22 +28,13 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int [] arrayLiteral = {200,300,400,500,600};
-        Log.d(TAG,"check it out " +arrayLiteral[4]);
+        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        arrayList.add(200);
+        arrayList.add(300);
 
-        String [] stringArray = new String [2];
-        stringArray[1] = "hello there";
+        Log.d(TAG, "Position 0 is "+arrayList.get(0));
+        Log.d(TAG, "Size of arrayList is "+arrayList.size());
 
-        Log.d(TAG, stringArray[0]+" "+stringArray[1]);
-
-        int[] array = new int[5];
-        array[0] = 200;
-        array[1] = 300;
-        array[2] = 400;
-        array[3] = 500;
-        array[4] = 600;
-
-        Log.d(TAG, "Position of array 0 is "+array[0]);
 
         mCurrentAccount = new BankAccount();
         mAmountInput = (EditText) findViewById(R.id.amount_input);
