@@ -1,27 +1,37 @@
 package com.example.iron.mybank;
 
-import android.util.Log;
+import java.util.ArrayList;
 
 /**
  * Created by neon on 3/31/15.
  */
 public class BankAccount {
     private static final String TAG = "BankAccount";
-    private double mBalance;
+    private ArrayList <Double> mTransactions;
     public static final double OVERDRAFT_FEE = 30;
 
+    BankAccount(){
+        mTransactions = new ArrayList<Double>();
+    }
+
     public void withdraw(double amount) {
-        mBalance -= amount;
-        if (mBalance < 0)
-            mBalance -= OVERDRAFT_FEE;
+        mTransactions.add(-amount);
+
+        if(getBalance() < 0){
+            mTransactions.add(-OVERDRAFT_FEE);
+        }
     }
 
 
     public void deposit(double amount) {
-        mBalance += amount;
+        mTransactions.add(amount);
     }
 
     public double getBalance() {
-        return mBalance;
+        double total = 0;
+        for (int i= 0; i < mTransactions.size(); i++){
+            total += mTransactions.get(i);
+        }
+        return total;
     }
 }
