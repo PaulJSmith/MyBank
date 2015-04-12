@@ -38,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
 
-        mCurrentAccount = new BankAccount();
+        mCurrentAccount = new BankAccount(BankAccount.Type.CHECKING);
         mAmountInput = (EditText) findViewById(R.id.amount_input);
         mWithdrawButton = (Button) findViewById(R.id.button_withdraw);
         mDepositButton = (Button) findViewById(R.id.button_deposit);
