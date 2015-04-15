@@ -11,20 +11,19 @@ public abstract class BankAccount {
     public static final double OVERDRAFT_FEE = 30;
 
     BankAccount (){
-
         mTransactions = new ArrayList<Double>();
-
     }
 
 
     public void withdraw(double amount) {
         mTransactions.add(-amount);
+
         if (getBalance() < 0) {
             mTransactions.add(-OVERDRAFT_FEE);
         }
     }
 
-    private int numberOfWithdrawals() {
+    public int numberOfWithdrawals() {
         int count = 0;
         for (int i = 0; i < mTransactions.size(); i++) {
             if (mTransactions.get(i) < 0) {

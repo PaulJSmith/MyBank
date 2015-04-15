@@ -28,17 +28,8 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mCurrentAccount = new SavingsAccount();
 
-        ArrayList<Integer> arrayList = new ArrayList<Integer>();
-        arrayList.add(200);
-        arrayList.add(300);
-
-        for (int i = 0; i < arrayList.size(); i++) {
-            Log.d(TAG, "Array item is " + arrayList.get(i));
-        }
-
-
-        mCurrentAccount = new CheckingAccount();
         mAmountInput = (EditText) findViewById(R.id.amount_input);
         mWithdrawButton = (Button) findViewById(R.id.button_withdraw);
         mDepositButton = (Button) findViewById(R.id.button_deposit);
