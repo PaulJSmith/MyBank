@@ -2,7 +2,6 @@ package com.example.iron.mybank;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,7 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import com.example.iron.accounts.BankAccount;
+import com.example.iron.accounts.SavingsAccount;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -29,6 +29,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         mCurrentAccount = new SavingsAccount();
+        mCurrentAccount.numberOfWithdrawals();
 
         mAmountInput = (EditText) findViewById(R.id.amount_input);
         mWithdrawButton = (Button) findViewById(R.id.button_withdraw);
